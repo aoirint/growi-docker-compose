@@ -1,4 +1,5 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.8.10
+ARG version=7.17.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:${version}
 LABEL maintainer Yuki Takei <yuki@weseek.co.jp>
 
 RUN bin/elasticsearch-plugin install analysis-kuromoji
